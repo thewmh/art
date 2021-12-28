@@ -4,8 +4,8 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 export default function Carousel(props) {
     const slideData = props.slides;
-    const slides = slideData.map((child) =>
-        <SplideSlide>
+    const slides = slideData.map((child, index) =>
+        <SplideSlide key={index}>
             <img src={child.src} alt={child.alt} />
         </SplideSlide>
     );

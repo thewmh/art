@@ -1,17 +1,18 @@
 .painting {
 
     &--link {
-
-        p {
-            &:hover {
-                + img {
-                    @apply scale-995 duration-300 ease-in-out;
-                }
-            }
-        }
+        @apply relative lg:flex-1 flex-initial lg:w-6/12 w-full h-full;
 
         img {
-            @apply inline hover:scale-995 duration-300 ease-in-out;
+            @apply relative inline hover:scale-995 hover:opacity-20 duration-500 ease-in-out z-20 w-full;
+        }
+
+        .painting--title {
+            @apply absolute inset-0 w-full h-full text-center z-10;
+
+            p {
+                @apply absolute inset-y-1/2 w-full;
+            }
         }
     }
 }
