@@ -1,0 +1,7 @@
+.btn {
+    @apply bg-cyan-500 shadow-md transition duration-1000;
+
+    &:hover {
+        @apply bg-cyan-100;
+    }
+}

@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allPaintings = Astro.fetchContent('./paintings/*.md');
+---
+<BaseLayout title="Wm Harrison Paintings">
+    <div class="container mx-auto">
+        {allPaintings.map((painting) => {
+            return(
+                <div class="painting--link">
+                    <a href={painting.url} alt={painting.title}>
+                        <img src={painting.slides[0].src}  alt={painting.title}/>
+                    </a>
+                </div>
+            )
+        })}
+    </div>
+</BaseLayout>

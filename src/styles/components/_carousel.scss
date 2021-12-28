@@ -1,0 +1,25 @@
+.splide {
+    @apply mb-12;
+
+    &__pagination {
+        @apply -bottom-8;
+    
+        &__page {
+            @apply bg-black;
+            &.is-active {
+                @apply bg-black;
+            }
+        }
+    }
+
+    &__arrow {
+
+        &--next {
+            @apply right-0;
+        }
+        
+        &--prev {
+            @apply left-0;
+        }
+    }
+}

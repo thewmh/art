@@ -1,0 +1,17 @@
+.painting {
+
+    &--link {
+
+        p {
+            &:hover {
+                + img {
+                    @apply scale-995 duration-300 ease-in-out;
+                }
+            }
+        }
+
+        img {
+            @apply inline hover:scale-995 duration-300 ease-in-out;
+        }
+    }
+}

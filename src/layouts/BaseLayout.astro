@@ -1,0 +1,26 @@
+---
+const {title} = Astro.props;
+const date = new Date();
+---
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')}>
+    <link rel="stylesheet" href={Astro.resolve('../styles/home.css')}>
+  </head>
+  <body>
+    <!-- Adds a navigation bar to every page. -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/paintings">Paintings</a>
+    </nav>
+    <!-- slot: your page content will be injected here. -->
+    <slot />
+    <footer>
+        <small>© {date.getFullYear()} William Harrison</small>
+    </footer>
+  </body>
+</html>

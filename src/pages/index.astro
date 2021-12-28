@@ -1,0 +1,51 @@
+---
+// Component Imports
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Tour from '../components/Tour.astro';
+import Button from '../components/Button.jsx';
+import Carousel from '../components/Carousel.jsx';
+// You can import components from any supported Framework here!
+const slides = [
+    {
+        src: `https://via.placeholder.com/728x90.png?text=Visit`,
+        alt: 'Guide'
+    },
+    {
+        src: `https://via.placeholder.com/728x90.png?text=Beans`,
+        alt: 'Smoked'
+    },
+    {
+        src: `https://via.placeholder.com/728x90.png?text=Pants`,
+        alt: 'Destroy'
+    },
+]
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'Wm Harrison Art';
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+    <BaseLayout title="Wm Harrison Art">
+        <header>
+            <div>
+                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
+                <h1 class="text-3xl">Wm Harrison Art</h1>
+                <Button>Hello, React!</Button>
+            </div>
+        </header>
+
+        <Carousel client:only slides={slides} />
+        <!-- <Tour /> -->
+
+        <!--
+           - You can also use imported framework components directly in your markup!
+           -
+           - Note: by default, these components are NOT interactive on the client.
+           - The `:visible` directive tells Astro to make it interactive.
+           -
+           - See https://docs.astro.build/core-concepts/component-hydration/ 
+           -->
+</BaseLayout>

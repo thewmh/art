@@ -1,0 +1,23 @@
+{
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.0",
+    "astro": "^0.21.13",
+    "sass": "^1.45.1",
+    "tailwindcss": "^3.0.7"
+  },
+  "dependencies": {
+    "@astrojs/renderer-react": "^0.3.1",
+    "@splidejs/react-splide": "^0.6.17",
+    "@splidejs/splide": "^3.6.9",
+    "postcss-easy-import": "^3.0.0"
+  }
+}
