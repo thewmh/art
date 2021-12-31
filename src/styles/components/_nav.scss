@@ -1,0 +1,17 @@
+nav, .nav__home-page {
+    a {
+        @apply relative bg-gradient-to-r from-current to-current bg-no-repeat bg-0/1px bg-100/100 transition-background-size duration-500 ease-in-out m-1;
+
+        &:hover {
+            @apply bg-100/1px bg-0/100;
+        }
+
+        &.current-link {
+            @apply font-semibold text-fuchsia-600;
+        }
+    }
+}
+
+.nav__home-page {
+    @apply text-center;
+}

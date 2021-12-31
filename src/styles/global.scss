@@ -4,6 +4,7 @@
 
 @import './components/button';
 @import './components/carousel';
+@import './components/nav';
 @import './components/painting';
 @import '../../node_modules/@splidejs/splide/dist/css/splide.min.css';
 
@@ -18,15 +19,22 @@
   --user-font-scale: 1rem - 16px;
   font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 
 body {
-  padding: 4rem 2rem;
+  padding: 2rem;
 //   width: 100%;
   min-height: 100vh;
-//   display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #f9fafb;
   color: #111827;
+  overflow: hidden;
+  overflow-y: scroll;
 //   @apply bg-black text-white;
 }
 

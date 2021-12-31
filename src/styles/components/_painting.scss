@@ -1,7 +1,7 @@
 .painting {
 
     &--link {
-        @apply relative lg:flex-1 flex-initial lg:w-6/12 w-full h-full;
+        @apply relative flex-initial lg:w-6/12 w-full h-full lg:basis-1/3 p-1;
 
         img {
             @apply relative inline hover:scale-995 hover:opacity-20 duration-500 ease-in-out z-20 w-full;
@@ -10,7 +10,7 @@
         .painting--title {
             @apply absolute inset-0 w-full h-full text-center z-10;
 
-            p {
+            h2 {
                 @apply absolute inset-y-1/2 w-full;
             }
         }

@@ -1,6 +1,7 @@
 ---
 const {title} = Astro.props;
 const date = new Date();
+const current = Astro.request.url.pathname;
 ---
 <html>
   <head>
@@ -13,14 +14,22 @@ const date = new Date();
   </head>
   <body>
     <!-- Adds a navigation bar to every page. -->
-    <nav>
-      <a href="/">Home</a>
-      <a href="/paintings">Paintings</a>
-    </nav>
+    <header>
+            <div>
+            {current !== '/' ?
+                <a href="/"><img width="60" height="80" src="/assets/wmh.svg" alt="Wm H"></a> : <img width="60" height="80" src="/assets/wmh.svg" alt="Wm H">
+            }
+            </div>
+    </header>
+        {current !== '/' ?
+            <nav>
+            <a href={current === '/paintings' ? "javascript:void(0)" : "/paintings"} class={current === '/paintings' ? "current-link" : ''}>Paintings</a>
+            </nav> : null
+        }
     <!-- slot: your page content will be injected here. -->
     <slot />
     <footer>
-        <small>© {date.getFullYear()} William Harrison</small>
+        <small>&copy; 2021 - {date.getFullYear()} - Wm Harrison</small>
     </footer>
   </body>
 </html>

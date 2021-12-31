@@ -8,7 +8,7 @@ slides:
     alt: Mattel Painting - Close-up Detail
 title: Mattel
 layout: ../../layouts/PaintingLayout.astro
-yearPainted: 2019
+yearPainted: 2021
 medium: Acrylic
 dimensions: 20" x 20"
 description: Inspired by a giant toy maker brand.

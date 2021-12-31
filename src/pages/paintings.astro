@@ -10,7 +10,7 @@ const allPaintings = Astro.fetchContent('./paintings/*.md');
                     <a href={painting.url} alt={painting.title}>
                         <img src={painting.slides[0].src}  alt={painting.title}/>
                         <div class="painting--title">
-                            <p>{painting.title}</p>
+                            <h2>{painting.title}</h2>
                         </div>
                     </a>
                 </div>
