@@ -8,7 +8,7 @@ slides:
     alt: Destroy
 title: Water Floats
 layout: ../../layouts/PaintingLayout.astro
-yearPainted: 2019
+yearPainted: 2021
 medium: Acrylic
 dimensions: 20" x 20"
 description: A water trigram floats on a wave.

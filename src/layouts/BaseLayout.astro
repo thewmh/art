@@ -12,7 +12,7 @@ const current = Astro.request.url.pathname;
     <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')}>
     <link rel="stylesheet" href={Astro.resolve('../styles/home.css')}>
   </head>
-  <body>
+  <body >
     <!-- Adds a navigation bar to every page. -->
     <header>
             <div>
@@ -20,14 +20,16 @@ const current = Astro.request.url.pathname;
                 <a href="/"><img width="60" height="80" src="/assets/wmh.svg" alt="Wm H"></a> : <img width="60" height="80" src="/assets/wmh.svg" alt="Wm H">
             }
             </div>
+            {current !== '/' ?
+                <nav>
+                <a href={current === '/paintings' ? "javascript:void(0)" : "/paintings"} class={current === '/paintings' ? "current-link" : ''}>Paintings</a>
+                </nav> : null
+            }
     </header>
-        {current !== '/' ?
-            <nav>
-            <a href={current === '/paintings' ? "javascript:void(0)" : "/paintings"} class={current === '/paintings' ? "current-link" : ''}>Paintings</a>
-            </nav> : null
-        }
     <!-- slot: your page content will be injected here. -->
-    <slot />
+    <div id="fade">
+        <slot />
+    </div>
     <footer>
         <small>&copy; 2021 - {date.getFullYear()} - Wm Harrison</small>
     </footer>

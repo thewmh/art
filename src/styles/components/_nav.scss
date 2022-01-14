@@ -1,4 +1,6 @@
 nav, .nav__home-page {
+    @apply text-center;
+
     a {
         @apply relative bg-gradient-to-r from-current to-current bg-no-repeat bg-0/1px bg-100/100 transition-background-size duration-500 ease-in-out m-1;
 
@@ -7,11 +9,7 @@ nav, .nav__home-page {
         }
 
         &.current-link {
-            @apply font-semibold text-fuchsia-600;
+            @apply bg-100/1px bg-0/100 bg-yellow-200;
         }
     }
-}
-
-.nav__home-page {
-    @apply text-center;
 }

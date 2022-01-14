@@ -2,13 +2,30 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Carousel from '../components/Carousel.jsx';
 const {content} = Astro.props;
+// const mainSlides = 
 ---
 <BaseLayout title={content.title}>
     <section class="container mx-auto prose">
         <article>
             <slot />
             <h1>{content.title}</h1>
-            <Carousel client:only slides={content.slides} />
+            <!-- {content.slides.length > 1 ? 
+                <Carousel client:only slides={content.slides} /> :
+                <img src={content.slides[0].src} alt={content.slides[0].alt} />
+            } -->
+            <div class="paintings">
+                {content.slides.map((content, index) =>
+                    <img class="painting-img" id={index} src={content.src} />
+                )}
+                <img class="painting-img--initial" src={content.slides[0].src} />
+            </div>
+            <div class="painting-nav">
+                {content.slides.map((content, index) =>
+                <a class="painting-img--link" href={`#${index}`}>
+                    <img src={content.src} />
+                </a>
+                )}
+            </div>
             <div class="details">
                 <p>{content.yearPainted}</p>
                 <p>{content.medium}</p>

@@ -4,10 +4,14 @@ const allPaintings = Astro.fetchContent('./paintings/*.md');
 ---
 <BaseLayout title="Paintings">
     <div class="container mx-auto flex flex-wrap">
-        {allPaintings.map((painting) => {
+        {allPaintings.sort(
+            // sort paintings by year
+            (paintingOne, paintingTwo) => paintingTwo.yearPainted - paintingOne.yearPainted).map(
+                // map over the sorted list for the render
+                (painting) => {
             return(
                 <div class="painting--link">
-                    <a href={painting.url} alt={painting.title}>
+                    <a href={`${painting.url}`} alt={painting.title}>
                         <img src={painting.slides[0].src}  alt={painting.title}/>
                         <div class="painting--title">
                             <h2>{painting.title}</h2>

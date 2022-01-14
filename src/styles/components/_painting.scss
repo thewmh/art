@@ -11,7 +11,7 @@
             @apply absolute inset-0 w-full h-full text-center z-10;
 
             h2 {
-                @apply absolute inset-y-1/2 w-full;
+                @apply absolute top-1/2 w-full -translate-y-1/2;
             }
         }
     }

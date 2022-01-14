@@ -1,8 +1,12 @@
 import React, { useState, useEffect, createRef } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-
 export default function Carousel(props) {
+    const [isLoading, setIsLoading] = useState(true);
+
+    function onLoad() {
+        setTimeout(() => setIsLoading(false), 1000);
+    }
     const mainRef = createRef();
     const thumbsRef = createRef();
     const slideData = props.slides;
@@ -21,6 +25,13 @@ export default function Carousel(props) {
 
     return (
         <>
+            <img
+                src={
+                slideData[0].src
+                }
+                style={{ display: isLoading ? "block" : "none" }}
+            />
+            <div onLoad={onLoad} style={{ display: isLoading ? "none" : "block" }}>
             <Splide options={ {
                 type: 'slide',
                 heightRatio : 1,
@@ -47,6 +58,7 @@ export default function Carousel(props) {
             } } className="mx-auto" ref={ thumbsRef }>
                 {slides}
             </Splide>
+            </div>
         </>
     )
 }
