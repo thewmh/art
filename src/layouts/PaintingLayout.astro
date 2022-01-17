@@ -7,7 +7,6 @@ const {content} = Astro.props;
 <BaseLayout title={content.title}>
     <section class="container mx-auto prose">
         <article>
-            <slot />
             <h1>{content.title}</h1>
             <!-- {content.slides.length > 1 ? 
                 <Carousel client:only slides={content.slides} /> :
@@ -32,6 +31,7 @@ const {content} = Astro.props;
                 <p>{content.dimensions}</p>
                 <p>{content.description}</p>
             </div>
+            <slot />
         </article>
     </section>
 </BaseLayout>
