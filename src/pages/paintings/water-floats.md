@@ -12,4 +12,5 @@ yearPainted: 2021
 medium: Acrylic
 dimensions: 20" x 20"
 description: A water trigram floats on a wave.
+draft: true
 ---
