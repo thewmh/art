@@ -1,5 +1,5 @@
 ---
-const {title} = Astro.props;
+const {title} = Astro?.props?.title ? Astro?.props : Astro?.props?.content;
 const date = new Date();
 const current = Astro.request.url.pathname;
 ---
@@ -17,7 +17,9 @@ const current = Astro.request.url.pathname;
     <header>
             <div>
             {current !== '/' ?
-                <a href="/"><img width="60" height="80" src="/assets/wmh.svg" alt="Wm H"></a> : <img width="60" height="80" src="/assets/wmh.svg" alt="Wm H">
+                <a href="/"><svg width="2em" height=".5em">
+                <use xlink:href="/assets/wmh.svg#Layer_1" fill="currentColor" /></svg></a> : <svg width="2em" height=".5em">
+                <use xlink:href="/assets/wmh.svg#Layer_1" fill="currentColor" /></svg>
             }
             </div>
             {current !== '/' ?
@@ -27,7 +29,7 @@ const current = Astro.request.url.pathname;
             }
     </header>
     <!-- slot: your page content will be injected here. -->
-    <div id="fade">
+    <div id="fade" class={`container mx-auto flex flex-wrap ${current === '/about' ? 'w-6/12' : ''}`}>
         <slot />
     </div>
     <footer>

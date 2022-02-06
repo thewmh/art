@@ -39,7 +39,11 @@ body {
   color: #111827;
   overflow: hidden;
   overflow-y: scroll;
-//   @apply bg-black text-white;
+
+  @media (prefers-color-scheme: dark) {
+      color: #f9fafb;
+      background-color: #111827;
+  }
 }
 
 footer {
@@ -89,5 +93,24 @@ footer {
 
     img {
         @apply m-0;
+    }
+}
+
+p {
+    @apply mb-6;
+}
+
+* {
+
+    @media (prefers-color-scheme: dark) {
+        --tw-prose-body: #f9fafb;
+        --tw-prose-headings: #f9fafb;
+    }
+}
+
+.prose {
+    @media (prefers-color-scheme: dark) {
+        color: #f9fafb;
+        background-color: #111827;
     }
 }
