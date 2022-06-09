@@ -9,15 +9,18 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@astrojs/react": "^0.1.1",
     "@tailwindcss/typography": "^0.5.0",
-    "astro": "^0.21.13",
+    "astro": "^1.0.0-beta.27",
+    "autoprefixer": "^10.4.7",
+    "rehype-slug": "^5.0.1",
     "sass": "^1.45.1",
     "tailwindcss": "^3.0.7"
   },
   "dependencies": {
-    "@astrojs/renderer-react": "^0.3.1",
-    "@splidejs/react-splide": "^0.6.17",
-    "@splidejs/splide": "^3.6.9",
-    "postcss-easy-import": "^3.0.0"
+    "@astrojs/renderer-react": "^0.5.0",
+    "@splidejs/react-splide": "^0.7.5",
+    "@splidejs/splide": "^4.0.1",
+    "postcss-easy-import": "^4.0.0"
   }
 }

@@ -1,7 +1,9 @@
 ---
+import '../styles/global.scss';
+import '../styles/home.css';
 const {title} = Astro?.props?.title ? Astro?.props : Astro?.props?.content;
 const date = new Date();
-const current = Astro.request.url.pathname;
+const current = Astro.canonicalURL.pathname;
 ---
 <html>
   <head>
@@ -9,8 +11,7 @@ const current = Astro.request.url.pathname;
     <meta name="viewport" content="width=device-width">
     <title>Wm Harrison - {title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')}>
-    <link rel="stylesheet" href={Astro.resolve('../styles/home.css')}>
+    <style lang="scss"/>
   </head>
   <body >
     <!-- Adds a navigation bar to every page. -->

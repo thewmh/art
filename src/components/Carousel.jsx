@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createRef } from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+import splide from '@splidejs/splide';
+const { Splide, SplideSlide } = splide;
 
 export default function Carousel(props) {
     const [isLoading, setIsLoading] = useState(true);

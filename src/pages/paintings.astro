@@ -1,20 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPaintings = Astro.fetchContent('./paintings/*.md').filter((el) => !el?.draft);
+const allPaintings = await Astro.glob('./paintings/*.md');
 ---
 <BaseLayout title="Paintings">
     <div class="container mx-auto flex flex-wrap">
-        {allPaintings.sort(
+        { allPaintings.filter(
+            // filter out paintings that are in draft state
+            painting => !painting.frontmatter.draft
+            )
+            .sort(
             // sort paintings by year
-            (paintingOne, paintingTwo) => paintingTwo.yearPainted - paintingOne.yearPainted).map(
+            (paintingOne, paintingTwo) => paintingTwo.frontmatter.yearPainted - paintingOne.frontmatter.yearPainted).map(
                 // map over the sorted list for the render
                 (painting) => {
             return(
                 <div class="painting--link">
-                    <a href={`${painting.url}`} alt={painting.title}>
-                        <img src={painting.slides[0].src}  alt={painting.title}/>
+                    <a href={`${painting.url}`} alt={painting.frontmatter.title}>
+                        <img src={painting.frontmatter.slides[0].src}  alt={painting.frontmatter.title}/>
                         <div class="painting--title">
-                            <h2>{painting.title}</h2>
+                            <h2>{painting.frontmatter.title}</h2>
                         </div>
                     </a>
                 </div>
