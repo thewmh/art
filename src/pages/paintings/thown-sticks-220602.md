@@ -14,13 +14,13 @@ description: Thrown Sticks painting June 2022.
 
 ## Lines (in mm)
 
-Top (L-R): 34, 197, 276, 362
+Top (L-R): 34, 97, 197, 276, 362
 
 Right (T-B): 56, 120, 235, 258, 318, 411, 436
 
 Bottom (L-R): 219, 460
 
-Left (T-B): 122, 176, 194, 282, 477
+Left (T-B): 122, 176, 194, 239, 282, 314, 477
 
 ## Color Mixes (top to bottom)
 
