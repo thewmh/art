@@ -28,31 +28,31 @@ Left (T-B): 122, 176, 194, 239, 282, 314, 477
 
 ## Color Mixes (top to bottom)
 
-Cobalt Blue Hue, Phthalo Blue GS, Light Phthalo Blu
+Gradient Blue - Cobalt Blue Hue, Phthalo Blue GS, Light Phthalo Blu
     
 1 : 1 : 14
 
-Phthalo Green BS, Cad Yellow Primrose
+Gradien Green - Phthalo Green BS, Cad Yellow Primrose
 
 1 : 19
 
-Phthalo Green BS, Cad Yellow Primrose
+Vibarnt Green - Phthalo Green BS, Cad Yellow Primrose
 
 1 : 24
 
-Phthalo Green BS, Cad Yellow Primrose, Titanium White
+Safety Green - Phthalo Green BS, Cad Yellow Primrose, Titanium White
 
 1 : 5 : 7
 
-N3 Neutral Gray, Cad Yellow Medium, Zinc White, Benzimidazolone Yellow Light
+Bright Yellow - N3 Neutral Gray, Cad Yellow Medium, Zinc White, Benzimidazolone Yellow Light
 
 1 : 2 : 23 : 73
 
-Light Phthalo Blue, Dioxazine Purple
+Gradient Purple - Light Phthalo Blue, Dioxazine Purple
 *could also include Quin Magenta*
 
 1 : 1
 
-Titanium White, Quin Magenta
+Gradient Fuchsia - Titanium White, Quin Magenta
 
 1 : 1
