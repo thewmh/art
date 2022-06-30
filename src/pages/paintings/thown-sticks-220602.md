@@ -2,6 +2,10 @@
 slides:
   - src: /assets/paintings/thrown-sticks-220602/220608-thrown-sticks.jpg
     alt: Thrown Sticks 220602 - With Color
+  - src: /assets/paintings/thrown-sticks-220602/220602-thrown-sticks-grid.jpg
+    alt: Thrown Sticks 220602 - Grid
+  - src: /assets/paintings/thrown-sticks-220602/220602-thrown-sticks-grid-overlay.jpg
+    alt: Thrown Sticks 220602 - Grid Overlay
   - src: /assets/paintings/thrown-sticks-220602/220602-thrown-sticks-palette.jpg
     alt: Thrown Sticks 220602 - Palette
 title: Thrown Sticks 220602
